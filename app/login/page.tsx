@@ -37,14 +37,14 @@ export default function LoginPage() {
         <div className="w-full overflow-hidden relative flex justify-center">
           <Image
             src="/fearless-girl.png"
-            alt="STB Real Estate"
+            alt="Fearless Girl"
             width={200}
             height={200}
             priority
           />
         </div>
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-teal-950">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#2D5774]">
             Sign in to your account
           </h2>
         </div>
@@ -86,7 +86,7 @@ export default function LoginPage() {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-teal-950 hover:bg-teal-900 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-teal-900"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#2D5774] hover:bg-[#4c99cf] focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-[4c99cf]"
             >
               Sign in
             </button>
