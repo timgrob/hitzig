@@ -93,7 +93,7 @@ export default function LoginPage() {
           </div>
         </form>
         <div className="text-center">
-          <Link href="/forgot-password" className="text-teal-900 hover:underline">
+          <Link href="/forgot-password" className="text-[#2D5774] hover:underline">
             Forgot password?
           </Link>
         </div>
