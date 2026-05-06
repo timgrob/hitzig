@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* react-datepicker overrides */
+.booking-datepicker .react-datepicker {
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.booking-datepicker .react-datepicker__month-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.booking-datepicker .react-datepicker__header {
+  background-color: #f0fdfa;
+  /* teal-50 */
+  border-bottom: 1px solid #ccfbf1;
+  /* teal-100 */
+  padding-top: 12px;
+}
+
+.booking-datepicker .react-datepicker__current-month {
+  font-size: 0.85rem;
+  font-weight: 600;
+  /* color: #042f2e; */
+  color: teal
+    /* teal-950 */
+}
+
+.booking-datepicker .react-datepicker__day-name {
+  /* color: #5eead4; */
+  color: teal;
+  /* teal-300 */
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 2rem;
+  line-height: 2rem;
+}
+
+.booking-datepicker .react-datepicker__day {
+  width: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+  color: #042f2e;
+  transition: background-color 0.15s;
+}
+
+.booking-datepicker .react-datepicker__day:hover {
+  background-color: #ccfbf1;
+  border-radius: 50%;
+  color: #042f2e;
+}
+
+.booking-datepicker .react-datepicker__day--selected,
+.booking-datepicker .react-datepicker__day--range-start,
+.booking-datepicker .react-datepicker__day--range-end {
+  background-color: #042f2e !important;
+  color: white !important;
+  border-radius: 50% !important;
+  font-weight: 600;
+}
+
+.booking-datepicker .react-datepicker__day--in-range {
+  background-color: #042f2e !important;
+  color: white !important;
+  border-radius: 0;
+}
+
+.booking-datepicker .react-datepicker__day--in-selecting-range {
+  background-color: #042f2e !important;
+  color: white !important;
+  border-radius: 0;
+}
+
+.booking-datepicker .react-datepicker__day--range-start {
+  border-radius: 50% 0 0 50% !important;
+}
+
+.booking-datepicker .react-datepicker__day--range-end {
+  border-radius: 0 50% 50% 0 !important;
+}
+
+.booking-datepicker .react-datepicker__day--range-start.react-datepicker__day--range-end {
+  border-radius: 50% !important;
+}
+
+.booking-datepicker .react-datepicker__day--disabled {
+  color: #d4d4d8 !important;
+  /* zinc-300 */
+  cursor: not-allowed !important;
+}
+
+.booking-datepicker .react-datepicker__day--disabled:hover {
+  background-color: transparent !important;
+}
+
+.booking-datepicker .react-datepicker__day--outside-month {
+  color: #a1a1aa;
+  /* zinc-400 */
+}
+
+.booking-datepicker .react-datepicker__navigation-icon::before {
+  border-color: #042f2e;
+}
+
+.booking-datepicker .react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: #0d9488;
+  /* teal-600 */
+}
+
+.booking-datepicker .react-datepicker__today-button {
+  background-color: #f0fdfa;
+  color: #042f2e;
+  border-top: 1px solid #ccfbf1;
+}
+
+.fc .fc-button {
+  border-radius: 6px;
+}
