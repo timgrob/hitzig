@@ -36,7 +36,7 @@ export default function LoginPage() {
       <div className="max-w-md w-full space-y-8">
         <div className="w-full overflow-hidden relative flex justify-center">
           <Image
-            src="/stb-image-removebg-square.png"
+            src="/fearless-girl.png"
             alt="STB Real Estate"
             width={200}
             height={200}
