@@ -19,6 +19,7 @@ model User {
   firstName String?
   lastName  String?
   password  String
+  isCloseFriend Boolean @default(false)
   resetPasswordTokenHash String?
   resetPasswordExpiresAt DateTime?
   bookings  Booking[]
