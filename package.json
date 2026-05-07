@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "npx prisma generate",
     "dev": "next dev",
     "build": "prisma migrate deploy && next build",
     "start": "next start",
-    "lint": "eslint .",
-    "postinstall": "npx prisma generate"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.20",
