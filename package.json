@@ -1,5 +1,5 @@
 {
-  "name": "stb-booking-system-app",
+  "name": "hitzig",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -56,14 +56,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timgrob/stb-booking-system.git"
+    "url": "git+https://github.com/timgrob/hitzig.git"
   },
   "keywords": [],
   "author": "Tim Grob",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/timgrob/stb-booking-system/issues"
+    "url": "https://github.com/timgrob/hitzig/issues"
   },
-  "homepage": "https://stb-booking-system.vercel.app/"
+  "homepage": "https://hitzig.vercel.app/"
 }
