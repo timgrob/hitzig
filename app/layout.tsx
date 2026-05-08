@@ -2,7 +2,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata = {
-  title: "STB Booking System",
+  title: "Hitzig",
   description: "A booking system app using Next.js and Prisma",
 };
 
