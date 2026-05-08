@@ -145,12 +145,12 @@ export function BookingFrom({ rooms }: { rooms: Room[] }) {
                         className={`w-full flex items-center gap-3 px-5 py-4 text-left transition-colors rounded-t-md md:rounded-l-md md:rounded-tr-none hover:bg-zinc-50 border-b md:border-b-0 md:border-r border-zinc-200 ${roomOpen ? "bg-zinc-50" : ""}`}
                     >
                         {/* Door icon */}
-                        <svg className="w-5 h-5 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                        <svg className="w-5 h-5 text-[#24465D] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
                         <div className="flex flex-col min-w-0">
                             <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">Room</span>
-                            <span className={`text-sm font-medium truncate ${room ? "text-teal-950" : "text-zinc-400"}`}>
+                            <span className={`text-sm font-medium truncate ${room ? "text-[#2D5774]" : "text-zinc-400"}`}>
                                 {room ? room.name : "Select a room"}
                             </span>
                         </div>
@@ -167,7 +167,7 @@ export function BookingFrom({ rooms }: { rooms: Room[] }) {
                                     key={r.id}
                                     type="button"
                                     onClick={() => handleRoomSelect(r)}
-                                    className={`w-full flex items-center gap-3 px-4 py-3 text-left text-sm hover:bg-teal-950 hover:text-zinc-50 transition-colors list-none ${room?.id === r.id ? "bg-teal-800 text-zinc-50" : "text-zinc-700"}`}
+                                    className={`w-full flex items-center gap-3 px-4 py-3 text-left text-sm hover:bg-[#2D5774] hover:text-zinc-50 transition-colors list-none ${room?.id === r.id ? "bg-[#24465D] text-zinc-50" : "text-zinc-700"}`}
                                 >
                                     {r.name}
                                 </button>
@@ -184,12 +184,12 @@ export function BookingFrom({ rooms }: { rooms: Room[] }) {
                         className={`w-full flex items-center gap-3 px-5 py-4 text-left transition-colors hover:bg-zinc-50 border-b md:border-b-0 md:border-r border-zinc-200 ${dateOpen ? "bg-zinc-50" : ""}`}
                     >
                         {/* Calendar icon */}
-                        <svg className="w-5 h-5 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                        <svg className="w-5 h-5 text-[#24465D] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <div className="flex flex-col min-w-0">
                             <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-400">Dates</span>
-                            <span className={`text-sm font-medium truncate ${checkIn ? "text-teal-950" : "text-zinc-400"}`}>
+                            <span className={`text-sm font-medium truncate ${checkIn ? "text-[#2D5774]" : "text-zinc-400"}`}>
                                 {dateLabel}
                             </span>
                         </div>
@@ -221,7 +221,7 @@ export function BookingFrom({ rooms }: { rooms: Room[] }) {
                     <button
                         type="button"
                         onClick={handleSubmit}
-                        className="w-full md:w-auto flex items-center justify-center gap-2 bg-teal-950 hover:bg-teal-800 disabled:opacity-50 disabled:cursor-not-allowed text-zinc-50 font-semibold text-sm px-6 py-3 rounded-md transition-colors whitespace-nowrap"
+                        className="w-full md:w-auto flex items-center justify-center gap-2 bg-[#2D5774] hover:bg-[#3B6D90] disabled:opacity-50 disabled:cursor-not-allowed text-zinc-50 font-semibold text-sm px-6 py-3 rounded-md transition-colors whitespace-nowrap"
                     >
                         {booking ? (
                             <>

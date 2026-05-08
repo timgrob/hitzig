@@ -16,7 +16,7 @@ export function BookingsPageClient({ initialBookings }: { initialBookings: Booki
                     type="button"
                     onClick={() => setView("future")}
                     className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${view === "future"
-                            ? "bg-teal-900 text-white"
+                            ? "bg-[#24465D] text-white"
                             : "text-zinc-600 hover:bg-zinc-100"
                         }`}
                 >
@@ -26,7 +26,7 @@ export function BookingsPageClient({ initialBookings }: { initialBookings: Booki
                     type="button"
                     onClick={() => setView("past")}
                     className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${view === "past"
-                            ? "bg-teal-900 text-white"
+                            ? "bg-[#24465D] text-white"
                             : "text-zinc-600 hover:bg-zinc-100"
                         }`}
                 >

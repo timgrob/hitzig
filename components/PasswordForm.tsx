@@ -45,7 +45,7 @@ export function PasswordForm() {
                         Current password
                     </label>
                     <div className="relative">
-                        <input id="current-password-input" type={showPassword ? "text" : "password"} value={current} placeholder="••••••••" onChange={(e) => setCurrent(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:border-transparent transition" />
+                        <input id="current-password-input" type={showPassword ? "text" : "password"} value={current} placeholder="••••••••" onChange={(e) => setCurrent(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#3B6D90] focus:border-transparent transition" />
                         <button
                             type="button"
                             onClick={() => setShowPassword((v) => !v)}
@@ -74,7 +74,7 @@ export function PasswordForm() {
                         New password
                     </label>
                     <div className="relative">
-                        <input id="new-password-input" type={showPassword ? "text" : "password"} value={next} placeholder="••••••••" onChange={(e) => setNext(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:border-transparent transition" />
+                        <input id="new-password-input" type={showPassword ? "text" : "password"} value={next} placeholder="••••••••" onChange={(e) => setNext(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#3B6D90] focus:border-transparent transition" />
                         <button
                             type="button"
                             onClick={() => setShowPassword((v) => !v)}
@@ -103,7 +103,7 @@ export function PasswordForm() {
                         Confirm password
                     </label>
                     <div className="relative">
-                        <input id="confirm-password-input" type={showPassword ? "text" : "password"} value={confirm} placeholder="••••••••" onChange={(e) => setConfirm(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-teal-800 focus:border-transparent transition" />
+                        <input id="confirm-password-input" type={showPassword ? "text" : "password"} value={confirm} placeholder="••••••••" onChange={(e) => setConfirm(e.target.value)} className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#3B6D90] focus:border-transparent transition" />
                         <button
                             type="button"
                             onClick={() => setShowPassword((v) => !v)}
@@ -132,7 +132,7 @@ export function PasswordForm() {
                         type="submit"
                         onClick={handleSubmit}
                         disabled={!canSubmit}
-                        className="inline-flex items-center gap-2 rounded-lg bg-teal-950 px-4 py-2 text-sm font-medium text-white hover:bg-teal-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        className="inline-flex items-center gap-2 rounded-lg bg-[#2D5774] px-4 py-2 text-sm font-medium text-white hover:bg-[#3B6D90] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     >
                         {loading && (
                             <svg className="size-4 animate-spin" fill="none" viewBox="0 0 24 24">

@@ -36,20 +36,20 @@ export function BookingCalendar({ initialBookings }: { initialBookings: Booking[
 
     return (
         <div className="pb-12 md:pb-0
-            [&_.fc-button]:!bg-teal-950
-            [&_.fc-button]:!border-teal-950
+            [&_.fc-button]:!bg-[#2D5774]
+            [&_.fc-button]:!border-[#2D5774]
             [&_.fc-button]:!text-white
-            [&_.fc-button:hover]:!bg-teal-800
-            [&_.fc-button:hover]:!border-teal-800
-            [&_.fc-button-active]:!bg-teal-700
-            [&_.fc-button-primary:not(:disabled):active]:!bg-teal-700
-            [&_.fc-button-primary:not(:disabled):active]:!border-teal-700
-            [&_.fc-toolbar-title]:text-teal-950
+            [&_.fc-button:hover]:!bg-[#3B6D90]
+            [&_.fc-button:hover]:!border-[#3B6D90]
+            [&_.fc-button-active]:!bg-[#24465D]
+            [&_.fc-button-primary:not(:disabled):active]:!bg-[#24465D]
+            [&_.fc-button-primary:not(:disabled):active]:!border-[#24465D]
+            [&_.fc-toolbar-title]:text-[#2D5774]
             [&_.fc-toolbar-title]:font-bold
-            [&_.fc-col-header-cell-cushion]:text-teal-950
+            [&_.fc-col-header-cell-cushion]:text-[#2D5774]
             [&_.fc-col-header-cell-cushion]:font-semibold
             [&_.fc-col-header-cell-cushion]:no-underline
-            [&_.fc-daygrid-day-number]:text-teal-950
+            [&_.fc-daygrid-day-number]:text-[#2D5774]
             [&_.fc-daygrid-day-number]:no-underline
             [&_.fc-toolbar-title]:!text-base
             [&_.fc-toolbar-title]:!md:text-xl

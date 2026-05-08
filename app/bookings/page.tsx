@@ -30,7 +30,7 @@ export default async function BookingPage() {
             <Header />
             <div className="min-h-screen bg-zinc-50 py-10 px-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-teal-950 text-2xl font-bold mb-6 text-left pb-6">
+                    <h1 className="text-[#2D5774] text-2xl font-bold mb-6 text-left pb-6">
                         My Bookings
                     </h1>
 
