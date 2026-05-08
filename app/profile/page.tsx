@@ -34,7 +34,7 @@ export default async function ProfilePage() {
 
                     {/* Header */}
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-teal-950 text-zinc-50 flex items-center justify-center text-sm font-bold shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-[#24465D] text-zinc-50 flex items-center justify-center text-sm font-bold shrink-0">
                             {initials}
                         </div>
                         <div>
