@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { BookingFrom } from "@/components/BookingForm";
 import { BookingCalendar } from "@/components/BookingCalendar";
 import prisma from "@/lib/prisma";
+import { getVisibleRoomsForUser } from "@/lib/rooms";
 
 export default async function HomePage() {
   const session = await getServerSession(authOptions);
@@ -21,15 +22,7 @@ export default async function HomePage() {
     redirect("/login"); // fallback if user not found
   }
 
-  const rooms = await prisma.room.findMany({
-    select: {
-      id: true,
-      name: true,
-      description: true,
-      capacity: true,
-    },
-    orderBy: { name: "desc" },
-  });
+  const rooms = await getVisibleRoomsForUser(user);
 
   const bookings = await prisma.booking.findMany({
     include: { room: true, user: true },

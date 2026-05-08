@@ -3,8 +3,9 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { notifyClients } from "@/app/api/bookings/stream/route";
 import prisma from "@/lib/prisma";
+import { canUserAccessRoom } from "@/lib/rooms";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         const session = await getServerSession(authOptions);
 
@@ -29,7 +30,7 @@ export async function POST(request: NextRequest) {
     try {
         const session = await getServerSession(authOptions);
 
-        if (!session) {
+        if (!session?.user?.id) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
 
@@ -38,6 +39,24 @@ export async function POST(request: NextRequest) {
 
         if (!roomId || !checkIn || !checkOut) {
             return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+        }
+
+        const user = await prisma.user.findUnique({
+            where: { id: session.user.id },
+            select: { isCloseFriend: true },
+        });
+
+        if (!user) {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+
+        const canAccessRoom = await canUserAccessRoom(user, roomId);
+
+        if (!canAccessRoom) {
+            return NextResponse.json(
+                { error: "You are not allowed to book this room" },
+                { status: 403 }
+            );
         }
 
         const existing = await prisma.booking.findFirst({

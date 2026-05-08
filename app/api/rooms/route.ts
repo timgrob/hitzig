@@ -1,16 +1,26 @@
 import prisma from "@/lib/prisma";
-import { NextRequest, NextResponse } from "next/server";
+import { authOptions } from "@/lib/auth";
+import { getVisibleRoomsForUser } from "@/lib/rooms";
+import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
-    const rooms = await prisma.room.findMany({
-        select: {
-            id: true,
-            name: true,
-            description: true,
-            capacity: true,
-        },
-        orderBy: { name: "desc" },
+export async function GET() {
+    const session = await getServerSession(authOptions);
+
+    if (!session?.user?.id) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const user = await prisma.user.findUnique({
+        where: { id: session.user.id },
+        select: { isCloseFriend: true },
     });
+
+    if (!user) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const rooms = await getVisibleRoomsForUser(user);
 
     return NextResponse.json(rooms);
 }

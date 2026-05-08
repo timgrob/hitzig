@@ -7,7 +7,7 @@ const prisma = new PrismaClient({ adapter });
 
 async function main() {
   // Create 5 users with hashed passwords
-  const users = await Promise.all([
+  await Promise.all([
     prisma.user.create({
       data: {
         email: 'alice@example.com',
@@ -50,26 +50,21 @@ async function main() {
     }),
   ]);
 
-  const rooms = await Promise.all([
+  await Promise.all([
     prisma.room.create({
       data: {
-        name: 'Office',
-        description: 'Büro im Erdgeschoss',
+        name: 'Maiensäss',
+        description: 'Maiensäss',
         capacity: 2,
+        requiresCloseFriend: false,
       },
     }),
     prisma.room.create({
       data: {
-        name: 'Bedroom',
-        description: 'Ehem. Zimmer von Claudi',
-        capacity: 2,
-      },
-    }),
-    prisma.room.create({
-      data: {
-        name: 'Tessin',
-        description: 'Haus im Tessin',
+        name: 'Churwalden',
+        description: 'Churwalden',
         capacity: 6,
+        requiresCloseFriend: true,
       },
     }),
   ]);
