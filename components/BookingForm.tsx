@@ -208,7 +208,7 @@ export function BookingFrom({ rooms }: { rooms: Room[] }) {
                                     inline
                                     minDate={today}
                                     maxDate={endDate}
-                                    monthsShown={2}
+                                    monthsShown={1}
                                     calendarStartDay={1}
                                 />
                             </div>
