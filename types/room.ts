@@ -3,4 +3,5 @@ export interface Room {
     name: string;
     description?: string | null;
     capacity?: number | null;
+    color?: string | null;
 };

@@ -4,7 +4,8 @@ export interface Booking {
     checkOut: Date;
     room: {
         id: string,
-        name: string
+        name: string,
+        color?: string | null,
     };
     user: {
         id: string
@@ -21,7 +22,8 @@ export interface BookingSerialized {
     checkOut: string;
     room: {
         id: string,
-        name: string
+        name: string,
+        color?: string | null,
     };
     user: {
         id: string

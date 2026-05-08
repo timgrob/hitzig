@@ -9,6 +9,7 @@ const roomSelect = {
   name: true,
   description: true,
   capacity: true,
+  color: true,
 };
 
 function visibleRoomWhere(user: RoomVisibilityUser) {

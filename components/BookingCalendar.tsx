@@ -3,7 +3,6 @@
 import useSWR from "swr";
 import { useEffect } from "react";
 import { fetcher } from "@/lib/fetcher";
-import { colorForRoom } from "@/lib/utils";
 import { Booking } from "@/types/booking"
 import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
@@ -30,7 +29,7 @@ export function BookingCalendar({ initialBookings }: { initialBookings: Booking[
             title: `${booking.room.name} (${booking.user.firstName})`,
             start: checkIn,
             end: checkOut,
-            color: colorForRoom(booking.room.id),
+            color: booking.room.color ?? "#a1a1aa",
         };
     });
 

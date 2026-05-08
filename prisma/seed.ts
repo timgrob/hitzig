@@ -57,6 +57,7 @@ async function main() {
         description: 'Maiensäss',
         capacity: 2,
         requiresCloseFriend: false,
+        color: '#38bdf8',
       },
     }),
     prisma.room.create({
@@ -65,6 +66,7 @@ async function main() {
         description: 'Churwalden',
         capacity: 6,
         requiresCloseFriend: true,
+        color: '#a78bfa',
       },
     }),
   ]);
