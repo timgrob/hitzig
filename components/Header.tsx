@@ -32,15 +32,15 @@ export function Header() {
 
                     {/* LEFT: LOGO (LINK TO HOME) */}
                     <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-                        <Image src="/stb-image-removebg-white-square.png" alt="STB Logo White" className="size-12" />
+                        <Image src="/fearless-girl-white.png" alt="Fearless Girl White" className="size-12" />
                     </Link>
 
                     {/* DESKTOP NAV */}
                     <nav className="hidden md:flex ml-10 items-center gap-8">
-                        <Link href="/" className="px-3 py-2 text-sm font-medium text-zinc-50 hover:text-teal-950 hover:bg-zinc-50 rounded-md transition-colors duration-150">
+                        <Link href="/" className="px-3 py-2 text-sm font-medium text-zinc-50 hover:text-[#2D5774] hover:bg-zinc-50 rounded-md transition-colors duration-150">
                             Home
                         </Link>
-                        <Link href="/bookings" className="px-3 py-2 text-sm font-medium text-zinc-50 hover:text-teal-950 hover:bg-zinc-50 rounded-md transition-colors duration-150">
+                        <Link href="/bookings" className="px-3 py-2 text-sm font-medium text-zinc-50 hover:text-[#2D5774] hover:bg-zinc-50 rounded-md transition-colors duration-150">
                             Bookings
                         </Link>
                     </nav>
@@ -49,7 +49,7 @@ export function Header() {
                         <div className="relative" ref={dropdownRef}>
                             <button
                                 onClick={() => setDropdownOpen((v) => !v)}
-                                className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-50 text-teal-950 text-sm font-bold hover:opacity-90 transition"
+                                className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-50 text-[#2D5774] text-sm font-bold hover:opacity-90 transition"
                                 aria-label="Open profile menu"
                             >
                                 {initials}
@@ -103,10 +103,10 @@ export function Header() {
             {mobileOpen && (
                 <div className="overflow-hidden transition-all duration-300">
                     <div className="border-t border-zinc-50/10 px-4 py-3 space-y-1">
-                        <Link href="/" className="block px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-teal-950 hover:bg-zinc-50 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
+                        <Link href="/" className="block px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-[2D5774] hover:bg-zinc-50 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
                             Home
                         </Link>
-                        <Link href="/bookings" className="block px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-teal-950 hover:bg-zinc-50 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
+                        <Link href="/bookings" className="block px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-[2D5774] hover:bg-zinc-50 rounded-lg transition-colors" onClick={() => setMobileOpen(false)}>
                             Bookings
                         </Link>
 
@@ -114,7 +114,7 @@ export function Header() {
                             <Link
                                 href="/profile"
                                 onClick={() => setMobileOpen(false)}
-                                className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-teal-950 hover:bg-zinc-50 rounded-lg transition-colors"
+                                className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-zinc-50 hover:text-[2D5774] hover:bg-zinc-50 rounded-lg transition-colors"
                             >
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
