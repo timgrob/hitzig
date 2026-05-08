@@ -32,7 +32,7 @@ export function Header() {
 
                     {/* LEFT: LOGO (LINK TO HOME) */}
                     <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-                        <Image src="/fearless-girl-white.png" alt="Fearless Girl White" className="size-12" />
+                        <Image src="/fearless-girl-white-square.png" alt="Fearless Girl White" className="size-12" />
                     </Link>
 
                     {/* DESKTOP NAV */}
